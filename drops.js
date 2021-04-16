@@ -10,7 +10,7 @@ class createDrop{
     }
 
     updateY(){     
-        if(this.rain.position.y > height){
+        if(this.rain.position.y > height-60){
             Matter.Body.setPosition(this.rain, {x:random(0,400), y:random(0,400)})
         }
     }

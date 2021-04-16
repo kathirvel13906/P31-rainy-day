@@ -9,8 +9,7 @@ var man;
 var ground;
 var thunde1r,thunde2r,thunde3r;
 var drops = [];
-var maxDrops=100;
-var thunderCreatedFrame=0;
+var maxDrops=150;
 
 function preload() {
     
@@ -28,7 +27,7 @@ function setup() {
 
     if(frameCount % 150 === 0) {
         for(var i=0; i<maxDrops; i++){
-            drops.push(new createDrop(random(0,400), random(0,400)));
+            drops.push(new createDrop(random(0,650), random(0,100)));
         }
     }
 
@@ -58,7 +57,7 @@ function draw() {
 
     for(var i = 0; i<maxDrops; i++){
         drops[i].showDrop();
-        drops[i].updateY();        
+        drops[i].updateY()        
     }
 }   
 
